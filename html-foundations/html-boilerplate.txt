@@ -1,0 +1,21 @@
+html boilerplate
+
+<!DOCTYPE html> tells computer which version of html to use -> HTML5 
+
+<html>
+</html> -> tag encloses all the html code
+
+<html lang = "en">
+</html> -> lang is responsible for indicating the language of the webpage is in English (important for screen readers to translate)
+
+<head>
+</head> -> important for meta-information (not the place for html)
+
+
+<title>My First Webpage</title> -> titles webpage 
+
+<body>
+</body> -> where actual HTML elements go into 
+
+<meta charset="UTF-8"> -> allows page to process special characters and regular characters 
+

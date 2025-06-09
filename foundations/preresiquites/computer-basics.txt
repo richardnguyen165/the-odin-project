@@ -1,0 +1,21 @@
+A computer is an electronic that manipulates information or data that is foramtted in binary, It has the ability to store, retreive and prcoess data.
+
+Hardware is any part of the computer that has a physical structure, such as the keyboard or the mouse.
+
+Software is responsible for telling the hard what to do.
+
+Types of computers: Desktop coputers, Laptop, Tablet,ATM, Servers, Smatphones, Wwearbales,Game consoles, TVs, PCs, Macs
+
+Servers are computers that serves up info to other computers on a network. For example, whenever you use the internet, youre looking at something stored on a serrver.
+
+An operating system is the most important software that runs on a computer. It manages the computer's memory and processes, as well as all of its software and hardware.
+
+You may have heard people talking about using a program, an application, or an app. But what exactly does that mean? Simply put, an app is a type of software that allows you to perform specific tasks. Applications for desktop or laptop computers are sometimes called desktop applications, while those for mobile devices are called mobile apps.
+
+Almost every piece of computer software is created using source code, which is the technical blueprint that tells a program how to function. When creators release their finished product to the public, they must decide whether to make its code open source or closed source.
+
+With closed source software (also known as proprietary software), the public is not given access to the source code, so they can’t see or modify it in any way.
+
+But with open source software, the source code is publicly available to anyone who wants it, and programmers can read or change that code if they desire. Keep in mind that you don’t have to read or modify any code in order to use an open source product.
+
+Closed source software is more likely to be a stable, focused product, and if you need support customer service is typically easier to access. However, closed source software often costs money, and if it has any bugs or missing features you’ll have to wait on the creator to address the problems. Open source solves bugs quickly, bbut may not be user-friendly and customer service may be limited in less well-known open-source.

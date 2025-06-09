@@ -1,0 +1,13 @@
+html - put elements on page
+css - style elements 
+javacsctript - make elements interactive
+
+elements - wrapped in opening, some content inside, and end with a closing tag
+
+example:
+
+<p> is the opening tag.
+some text content represents content wrapped within the opening and closing tags.
+</p> is the closing tag.
+
+void elements, such as <br> -> break or <img> -> image dont have a closing tag 

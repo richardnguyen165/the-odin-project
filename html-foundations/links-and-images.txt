@@ -1,0 +1,35 @@
+to create a link in html, use an anchor element and add an href (without it, it won't do anything):
+
+<a href="https://www.theodinproject.com/about">About The Odin Project</a>
+
+opening links in a new tab
+
+add taget = "_blank" this allows it to open in a new tab.
+
+
+rel="noopener noreferrer" IS VERY IMPORTANT
+
+noopener ensures that the link opened in the new window can access the previous/original page
+
+noreferrer prevents the new page from knowing where the user came from (what page they clicked in order to get to the page they are currently on)
+
+noopener prevents phishing attacks (tabnabbing)
+
+
+
+TYPES OF LINKS 
+
+Absolute Links 
+
+Links to other websites on the internet are called absolute links. 
+
+Syntax: scheme://domain/path
+
+Example: https://www.theodinproject.com/about
+
+
+Relative Limls
+
+Links to other pahes within our website are called relative links. Reletive links 
+do not have the domain name, and it is relative to the page you are creating the page 
+you are in (think of the file system)

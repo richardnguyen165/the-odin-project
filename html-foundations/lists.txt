@@ -1,0 +1,32 @@
+<ul> -> unordered list
+<ol> -> ordered list
+<li> -> a list item element
+
+
+<ul>
+  <li>
+    "hi!"
+  </li>
+  <li>
+    "hi!"
+  </li>
+</ul>
+
+results in:
+
+- "hi!"
+- "hi!"
+
+
+<ol>
+  <li>
+    "hi!"
+  </li>
+  <li>
+    "hi!"
+  </li>
+</ol>
+
+
+1. "hi!"
+2. "hi!"
