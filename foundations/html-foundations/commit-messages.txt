@@ -1,0 +1,1 @@
+Commit messgae should have a subject and a body (remeber max 70 characters for a git message)

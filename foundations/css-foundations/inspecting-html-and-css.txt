@@ -1,0 +1,9 @@
+Just copy and paste since I have experience with this already
+
+To open up the inspector, you can right-click on any element of a webpage and click “Inspect” or press F12. Go ahead and do that right now to see the HTML and CSS used on this page.
+
+you can click the blue-highlighted icon shown below on the left, and hover over any element on the page.
+
+When an element is selected, the Styles tab will show all the currently applied styles, as well as any styles that are being overwritten (indicated by a strikethrough of the text). (bottom of the inspect element)
+
+The Styles panel also allows you to edit styles directly in the browser.  (click and type)

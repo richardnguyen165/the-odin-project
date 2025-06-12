@@ -1,0 +1,192 @@
+/*
+Basic syntax of CSS:
+
+selector {
+  property: value
+}
+*/
+
+/*
+Selectors
+
+Targets specific HTML elements to style them. They are being 
+'selected' for each rule/styling.
+*/
+
+
+/* Universal Selector - applies to ALL html elements
+Changes font color to purple */
+* {
+  color: purple;
+}
+
+/*
+Type Selector - selects an element of a given type
+*/
+
+/* Targets paragraph elements */
+p {
+  color: black;
+}
+
+/* Tagets div elements */
+div {
+  background-color:  green;
+}
+
+/* Targets the class  "alert-text"
+Must start with a period to target a class. 
+A class is an attribute you place on an HTML element. 
+You can use the same class on as many elements as you want. 
+*/
+.alert-text{
+  display:  flex;
+}
+
+/* 
+ID Selectors
+IDs can be used for only ONE element (cannot be used for any other)
+Example:
+<div id="title">My Awesome 90's Page</div>
+
+We use a hashtag before everything when using an ID.
+Use IDs sparingly (if at all)
+*/
+
+#title {
+  background-color: red;
+}
+
+/*
+Grouping Selectors
+
+Used if more than one group of element share some of the stye declarations (can reduce repitition)
+*/
+
+
+
+/* Gives a text color of white, and a background color of black to elemens in read and unread class. */
+.read,
+.unread {
+  color: white;
+  background-color: black;
+}
+
+.read {
+  /* several unique declarations */
+}
+
+.unread {
+  /* several unique declarations */
+}
+
+
+/*
+Chaining Selectors
+
+<div>
+  <div class="subsection header">Latest Posts</div>
+  <p class="subsection" id="preview">
+    This is where a preview for a post might go.
+  </p>
+</div>
+
+// Chain them without any seperation -> effects elements that have both a subsection and header class
+.subsection.header {
+  color: red;
+}
+
+// effects elements that have a subsection class and preview id
+.subsection#preview {
+  color: blue;
+}
+
+// you cannot chain more than one type of type selector -> div & p dont work together
+*/
+
+/*
+Descendant combinator
+
+Represented by a single space between each one, it only effects
+elements that mtch the last selector to tbe selected if they also have an ancester that matches the previous selector
+
+For example: .ancestor .child
+all elements that has the ancestor class, and the child class nested within it would be effected
+
+<!-- index.html -->
+
+<div class="ancestor">
+  <!-- A -->
+  <div class="contents">
+    <!-- B -->
+    <div class="contents"><!-- C --></div>
+  </div>
+</div>
+
+<div class="contents"><!-- D --></div>
+
+B & C effected
+*/
+
+/*
+color: text color
+background-color: background color
+font-family: font
+font-weight: 100-900 -> boldness (increment by 100)
+text-align: align text within an element
+*/
+
+/*
+Image: use height and width
+
+default: height and width same as the actual image's height and width
+if you want to adjust image size without losing proportion, use auto
+
+img {
+  height: auto;
+  width: 500px;
+}
+
+ if an image’s original size was 500px height and 1000px width, using the above CSS would result in a height of 250px.
+
+expicitly staing a height and width prevents an image from bloating up the page when loading, as space will
+be "reserved" on the page, and appears blank untils it loads (like a parking space)
+*/
+
+
+/*
+Types of CSS References:
+
+Inline CSS (not recommended)
+<body>
+  <div style="color: white; background-color: black;">...</div>
+</body>
+
+Internal CSS (not recommended, causes html file to get large)
+<head>
+  <style>
+    div {
+      color: white;
+      background-color: black;
+    }
+
+    p {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  ...
+</body>
+
+<!-- index.html -->
+
+External CSS
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+(Edit styles.css)
+
+- It keeps our HTML and CSS separated, which results in the HTML file being smaller and making things look cleaner.
+- We only need to edit the CSS in one place, which is especially handy for websites with many pages that all share similar styles.
+*/

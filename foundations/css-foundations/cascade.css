@@ -1,0 +1,102 @@
+/*
+in terms of rules there are a few to follow (which rules are applied)
+helps reason as to why (why is my box red instead of blue?
+
+lowest to highest in terms of specific: 
+
+1. ID selectors (most specific selector)
+2. Class selectors
+3. Type selectors (least specific)
+
+if two elements are the same, whichever one has more of the selectors wins
+
+otherwise, no matter how many selectors of one class, if there is even one above, that above one wins
+(5 class selectors < 1 id selector)
+
+in some cases, if there is no specificity winning, whichever one is the lowest wins
+
+NOTE:
+
+When comparing selectors, you may come across special symbols for the universal selector (*) as well as combinators (+, ~, >, and an empty space). These symbols do not add any specificity in and of themselves.
+*/
+
+/* Example one: rule 2 wins because it has more class selectors*/
+
+/* rule 1 */
+.subsection {
+  color: blue;
+}
+
+/* rule 2 */
+.main .list {
+  color: red;
+}
+
+/* Example two: rule 2 wins becayse it has an ID selector*/
+
+/* rule 1 */
+#subsection {
+  color: blue;
+}
+
+/* rule 2 */
+.main .list {
+  color: red;
+}
+
+
+/* Example three: Both have an id selector. However, because rule 2 has an additional class selector, it wins*/
+/* rule 1 */
+#subsection {
+  background-color: yellow;
+  color: blue;
+}
+
+/* rule 2 */
+.main #subsection {
+ color: red;
+}
+
+
+/*Example four: No one wins -> both have two class selectors, even if the first one is chained (actually rule 2 wins)*/
+/* rule 1 */
+.class.second-class {
+  font-size: 12px;
+}
+
+/* rule 2 */
+.class .second-class {
+  font-size: 24px;
+}
+
+
+/*Example five: No one wins -> both have two class selectors, even if the second one is a parent-child (actually rule 2 wins)*/
+/* rule 1 */
+.class.second-class {
+  font-size: 12px;
+}
+
+/* rule 2 */
+.class > .second-class {
+  font-size: 24px;
+}
+
+/*
+Inheritance
+
+<div id="parent">
+  <div class="child"></div>
+</div>
+
+Inheritance refers to certain CSS properties that, when applied to an element, are inherited by that element’s descendants, even if we don’t explicitly write a rule for those descendants.
+*/
+
+
+/* In this case, the element with a text-color of blue, however, if we remove it, it will be red instead.*/
+#parent {
+  color: red;
+}
+
+.child {
+  color: blue;
+}

@@ -1,0 +1,13 @@
+Everything on a webpage can be visualized as a rectangular box.
+
+Those bxoes consist of (inside -> out):
+- content
+- padding, space between the content and the border
+- border, space between padding and margin
+- margin, space between box and other boxes (or replace boxes with elements)
+
+Learn CSS Box Model in 8 minutes
+
+- Use padding to expand the size of the box (padding occurs inside the border)
+- Margin is used to space two elements from each other 
+- 
