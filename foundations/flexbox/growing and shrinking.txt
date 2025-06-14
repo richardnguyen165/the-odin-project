@@ -1,0 +1,18 @@
+flex: initial
+equivalnet to flex: 0 1 auto 
+
+Sizes items based height and width. Does not grow, but does shrink. 
+
+flex: auto 
+equivalent to flex: 1 1 auto 
+makes container both grow and shrink 
+
+flex: none
+flex: 0 0 auto 
+makes item not flexible, and sets them according to width and height properties 
+
+flex: <positive number>
+flex: <positive number> 1 0
+makes item flexible and sets thr flex basis to zero, resulting in an item that receives the specified proportion of free space 
+
+

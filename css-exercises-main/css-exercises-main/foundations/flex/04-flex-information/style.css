@@ -1,0 +1,56 @@
+body {
+  /*aligns all text in body to center immed.*/
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 900;
+
+  margin-bottom: 32px;
+}
+
+/* My solution is more verbose. */
+
+/*
+(Removed from solution, could've used body and text-align : center) use text-align only for test
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+*/
+
+.image-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 52px;
+}
+
+.plant-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 200px;
+}
+
+/* do not edit this footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+}

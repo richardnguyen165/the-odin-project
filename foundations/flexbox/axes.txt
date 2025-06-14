@@ -1,0 +1,15 @@
+For axes, there is the horizontal and the vertical. This is set by flex-direction. 
+(First, that container must have display: flex)
+
+for row, the main axis is horizontal (meaning, use justify-content for horizontal aligning) 
+and the cross axis is vertical (meaning use align-items for vertical aligning). 
+flex-basis defaults to width if set to auto. 
+
+for column, the main axis is vertical (meaning, use justify-content for vertical aligning) 
+and the cross axis is horizontal  (meaning use align-items for horizontal aligning). 
+flex-basis defaults to specified height if set to auto, else for a div (which has a default height ogf zero), goes to zero (MAJOR PROBLEM)
+
+NOTE (copied and paste form TOP):
+We’ve strayed from the point slightly… We were talking about flex-direction and axes. To bring it back home, the default behavior is flex-direction: row which arranges things horizontally. The reason this often works well without changing other details in the CSS is because block-level elements default to the full width of their parent. Changing things to vertical using flex-direction: column adds complexity because block-level elements default to the height of their content, and in this case there is no content.
+
+In other words, column could cause complexity because they default to height of content (and content could be not there so it could default to zero)

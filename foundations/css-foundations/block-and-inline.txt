@@ -1,0 +1,30 @@
+By default, block elements will appear on the page stacked on atop of each other, each starting on a new line.
+
+Inline block appear in line with whatever elements they are placed beside. Do not add padding or margin for inline lements, it bhaves differently.
+
+Divand spans are "hook" elements, where we can give them ids to style them. (customized elements)
+
+Divs are block elements, spans are in-block elements.
+
+Divs aere contaners elements used to store elements, and divide the page into "blocks"
+
+Span are mainly used to group texr context and inline HTML elements for style and should only be used when no other semantic HTML element is appropriate.
+
+
+Normal flow
+
+A block element fills the entire inline space of a parent elment by default, growing by the parent's length
+
+to set in-block or block, use display:block or display: in-block in CSS
+
+Inline elements sit on the same line as long as there is space
+
+
+display inline -> width and height are not respeceted, overlap
+
+
+display: inline-block
+Here the width, height and padding are respected, but the two copies of the element can still sit side by side.
+
+display: block
+Here again everything is respected, but the elements don’t sit side by side.

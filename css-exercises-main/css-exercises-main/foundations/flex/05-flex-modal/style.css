@@ -22,6 +22,7 @@ body {
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
 }
 
+
 .icon {
   color: royalblue;
   font-size: 26px;
@@ -66,4 +67,41 @@ button.cancel {
   background: white;
   border: 1px solid #ddd;
   color: royalblue;
+}
+
+/*STUDENT WORK*/
+
+.modal{
+  display: flex;
+  padding: 20px;
+}
+
+.header, .close-button{
+  font-weight: bold;
+}
+
+.close-button{
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.header{
+  font-size: 20px;
+}
+
+.icon-container{
+  margin-right: 20px;
+}
+
+.content-container{
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

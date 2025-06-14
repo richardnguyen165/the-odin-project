@@ -1,0 +1,90 @@
+Items in flexbox grow or shrink based on the rules you define
+
+Any thing that has "display: flex" is a flex container
+
+Any thing inside is called a flex item
+
+
+display: flex -> creates a flex container, and creates a cross axis and main axis
+
+flex-driection: row  main is horizontal, cross is vert
+
+flex-direction: column main is vertical, cross is horz
+
+justify-content is used for the main axis:
+- flex-start
+- flex-end
+- center
+- space-between (distribute evenly between first and last item)
+- space-around same as space-between but space at the beginning and ends
+- space-evenly
+
+
+align-items is used for the cross axis:
+- flex-start
+- flex-end
+- center 
+- baseline (baseline text of each item is aligned)
+
+
+flex-direction set to row (left to right) by default
+
+flex-direction: column makes vertical main axis 
+
+
+flex-wrap: wrap -> allows item to move to the next line if too many items in one row/column 
+
+align-content only works when flex-wrap set to wrap (has the same as justify-content) -> affects the rows/columns whenw wrappig 
+
+gap -> adds space between element (column-gap and row-gap)
+
+
+flex-grow -> signifies how much an element can take up the available space (if any) (the remaining space will be distributed to the remaining children)
+
+flex-grow: 1-> grows if enough space 
+
+flex-grow: 2 -> grows 2x more space than the other spaces 
+
+From TOP
+If we instead add flex: 2 to just one of the divs, then that div would grow to 2x the size of the others.
+
+
+flex-shrink -> how fast 1 item shrinks compared to others 
+
+flex-shrink: 0 -> no shrinking 
+
+
+flex-basis: -> defines the size before distributing space
+flex-basis sets the initial size of a flex item, so any sort of flex-growing or flex-shrinking starts from that baseline size.
+
+
+Use the shorthand: flex: 1 (<flex-grow>: 1 <flex-shrink>: 1 <flex-basis>: 0)
+flex: auto (<flex-grow>: 1 <flex-shrink>: 1 <flex-basis>: auto)
+
+
+align-self -> allows self property to override item (breaks pattern, and it allows self-alignment)
+
+
+order -> lowest to highest on each element in flex container, lowest appearing first, highest appearing last
+
+example
+
+element 1 ->  order: 1
+
+element 2 - > order: 5
+
+element 3 -> order: -4
+
+element 4 -> order: -1
+
+element 5 -> no order (defaults to 0)
+
+order of appearing: 3 4 5 1 2
+
+
+NOTE TO SELF:
+"An important implication to notice here is that when you specify flex-grow or flex-shrink, flex items do not necessarily respect your given values for width. In the above example, all 3 divs are given a width of 250px, but when their parent is big enough, they grow to fill it. Likewise, when the parent is too small, the default behavior is for them to shrink to fit. This is not a bug, but it could be confusing behavior if you aren’t expecting it."
+
+In order of words, depending on the constraints, the width or height specified may not be respected.
+
+

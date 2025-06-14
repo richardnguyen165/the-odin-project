@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* this is some magical font-importing.  
 you'll learn about it later. */
 @import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,900&display=swap');
@@ -9,6 +15,12 @@ body {
 }
 
 .header {
+  /*STUDENT WORK*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
@@ -41,8 +53,21 @@ a {
   /* this removes the line under our links */
   text-decoration: none;
   color: rebeccapurple;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 ul {
+  display: flex;
+  gap: 10px;
   list-style-type: none;
+}
+
+
+/*STUDENT - CONTAINERS */
+
+.first-part, .second-part{
+  /*STUDENT WORK*/
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
