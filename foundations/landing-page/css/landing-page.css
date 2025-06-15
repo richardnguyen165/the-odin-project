@@ -1,13 +1,28 @@
-body{
+/* GENERAL SELECTORS */
+
+body, .flex-adder{
   display: flex;
+}
+
+.centering-item{
+  justify-content: center;
+  align-items: center;
+}
+
+body{
   flex-direction: column;
   font-family: 'Roboto';
   margin: 0;
 }
 
+button{
+  cursor: pointer;
+  background-color: #3882F6;
+  color: #F9FAF8;
+}
+
 /*FIRST-SECTION*/
 .header-container{
-  display: flex;
   justify-content: space-around;
   align-items: center;
   height: 50px;
@@ -22,27 +37,21 @@ body{
 
 .header-links-container{
   font-size: 18px;
-  display: flex;
   color: #E5E7EB;
   gap: 20px;
 }
 
 /*SECOND-SECTION*/
 .website-hero-container{
-  display: flex;
   background-color: #1F2937;
-  justify-content: center;
-  align-items: center;
   height: 500px;
 }
 
 .hero-container{
-  display: flex;
   width: 1000px;
 }
 
 .hero-description{
-  display: flex;
   flex-direction: column;
 }
 
@@ -64,27 +73,24 @@ body{
 }
 
 .hero-button{
-  background-color: #3882F6;
   border: none;
-  color: #F9FAF8;
   padding: 10px;
   border-radius: 5px;
   width: 100px;
   font-weight: bolder;
-  cursor: pointer;
+}
+
+.hero-media-image-container{
+  margin-left: 50px;
 }
 
 /*THIRD-SECTION*/
 
 .information-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 500px;
 }
 
 .inner-information-container{
-  display: flex;
   flex-direction: column;
   text-align: center;
 }
@@ -96,13 +102,11 @@ body{
 }
 
 .information-illustrations-container{
-  display: flex;
   flex-wrap: wrap;
   gap: 40px;
 }
 
 .information-illustrations{
-  display: flex;
   flex-direction: column;
   gap: 10px;
   width: 180px;
@@ -117,15 +121,11 @@ body{
 /*FOURTH-SECTION*/
 
 .quote-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #E5E7EB;
   height: 500px;
 }
 
 .inner-quote-container{
-  display: flex;
   flex-direction: column;
   width: 830px;
 }
@@ -137,7 +137,6 @@ body{
 }
 
 .author{
-  display: flex;
   justify-content: flex-end;
   font-weight: bolder;
   font-size: 20px;
@@ -146,21 +145,16 @@ body{
 /*FIFTH-SECTION*/
 
 .call-to-action-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 500px;
 }
 
 .call-to-action-block{
-  display: flex;
   background-color: #3882F6;
   padding: 50px;
   border-radius: 8px;
 }
 
 .call-to-action-content-container{
-  display: flex;
   flex-direction: column;
 }
 
@@ -178,29 +172,20 @@ body{
 }
 
 .call-to-action-sign-up-button-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-left: 200px;
 }
 
 .call-to-action-sign-up-button{
-  background-color: #3882F6;
   border-color: white;
   border-style: solid;
   border-radius: 5px;
-  color: #F9FAF8;
   width: 90px;
   padding: 5px;
-  cursor: pointer;
 }
 
 /*SIXTH-SECTION*/
 
 .footer-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #1F2937;
   height: 100px;
   color: #F9FAF8;
