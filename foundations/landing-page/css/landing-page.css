@@ -1,4 +1,13 @@
-/* GENERAL SELECTORS */
+/* GENERAL SELECTORS (Helps clean up CSS Code*/
+
+body{
+  font-family: 'Roboto';
+  margin: 0;
+}
+
+body, .flex-direction-column{
+  flex-direction: column;
+}
 
 body, .flex-adder{
   display: flex;
@@ -9,16 +18,32 @@ body, .flex-adder{
   align-items: center;
 }
 
-body{
-  flex-direction: column;
-  font-family: 'Roboto';
-  margin: 0;
-}
-
 button{
   cursor: pointer;
-  background-color: #3882F6;
+}
+
+button, .color-f9faf8{
   color: #F9FAF8;
+}
+
+.color-e5e73b{
+  color: #E5E7EB;
+}
+
+.color-1f2937{
+  color: #1F2937;
+}
+
+.background-color-1f2937{
+  background-color: #1F2937
+}
+
+button, .background-color-3882f6{
+  background-color: #3882F6;
+}
+
+.height-500px{
+  height: 500px;
 }
 
 /*FIRST-SECTION*/
@@ -26,33 +51,22 @@ button{
   justify-content: space-around;
   align-items: center;
   height: 50px;
-  background-color: #1F2937;
 }
 
 .header-logo{
   font-size: 24px;
   font-weight: bolder;
-  color: #F9FAF8;
 }
 
 .header-links-container{
   font-size: 18px;
-  color: #E5E7EB;
   gap: 20px;
 }
 
 /*SECOND-SECTION*/
-.website-hero-container{
-  background-color: #1F2937;
-  height: 500px;
-}
 
 .hero-container{
   width: 1000px;
-}
-
-.hero-description{
-  flex-direction: column;
 }
 
 .hero-title, .hero-font{
@@ -61,7 +75,6 @@ button{
 
 .hero-title{
   font-size: 48px;
-  color: #F9FAF8;
   font-weight: 900;
 }
 
@@ -69,7 +82,6 @@ button{
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 18px;
-  color: #E5E7EB;
 }
 
 .hero-button{
@@ -86,18 +98,12 @@ button{
 
 /*THIRD-SECTION*/
 
-.information-container{
-  height: 500px;
-}
-
 .inner-information-container{
-  flex-direction: column;
   text-align: center;
 }
 
 .information-header{
   font-size: 36px;
-  color: #1F2937;
   font-weight: 900;
 }
 
@@ -107,7 +113,6 @@ button{
 }
 
 .information-illustrations{
-  flex-direction: column;
   gap: 10px;
   width: 180px;
 }
@@ -122,18 +127,15 @@ button{
 
 .quote-container{
   background-color: #E5E7EB;
-  height: 500px;
 }
 
 .inner-quote-container{
-  flex-direction: column;
   width: 830px;
 }
 
 .quote{
   font-size: 36px;
   font-weight: lighter;
-  color: #1F2937
 }
 
 .author{
@@ -144,18 +146,9 @@ button{
 
 /*FIFTH-SECTION*/
 
-.call-to-action-container{
-  height: 500px;
-}
-
 .call-to-action-block{
-  background-color: #3882F6;
   padding: 50px;
   border-radius: 8px;
-}
-
-.call-to-action-content-container{
-  flex-direction: column;
 }
 
 .call-to-action-header, .call-to-action-description{
@@ -163,12 +156,7 @@ button{
 }
 
 .call-to-action-header{
-  color: #F9FAF8;
   font-weight: bold;
-}
-
-.call-to-action-description{
-  color: #E5E7EB;
 }
 
 .call-to-action-sign-up-button-container{
@@ -186,7 +174,5 @@ button{
 /*SIXTH-SECTION*/
 
 .footer-container{
-  background-color: #1F2937;
   height: 100px;
-  color: #F9FAF8;
 }
