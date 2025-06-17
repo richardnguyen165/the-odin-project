@@ -1,43 +1,63 @@
-let continueGame = true;
 
-while (continueGame){
+
+let humanScore = Number(localStorage.getItem('humanScore')) || 0;
+let computerScore = Number(localStorage.getItem('computerScore')) || 0;
+
+function getHumanChoice(){
+
+  document.querySelector('.human-score').innerHTML = `Your Score: ${humanScore}`;
+  document.querySelector('.computer-score').innerHTML = `Computer Score: ${computerScore}`;
+
   let userInput = prompt("Rock, Paper, or Scissors?");
 
   fixedInput = userInput.toLowerCase().trim();
 
-  if (fixedInput === 'rock' || fixedInput === 'paper' || fixedInput === 'scissors'){
-    computerMove(fixedInput);
-  } 
-  else{
-    console.log(`INVALID MOVE: ${userInput}`);
-  }
+  return fixedInput;
 }
 
 
-function computerMove(playerMove){
+function getComputerChoice(){
   const randomNumber = Math.floor(Math.random() * 3);
-  let computerMove;
+  let computerChoice;
 
   if (randomNumber === 0){
-    computerMove = 'rock';  
+    computerChoice = 'rock';  
   }
   else if (randomNumber === 1){
-    computerMove = 'paper';
+    computerChoice = 'paper';
   }
   else{
-    computerMove = 'scissors';
+    computerChoice = 'scissors';
   }
 
-  let finalMessage = `Your Move: ${playerMove[0].toUpperCase() + playerMove.slice(1)}. Computer Move: ${computerMove[0].toUpperCase() + computerMove.slice(1)}. Result: `;
-  if (playerMove === computerMove){
+  return computerChoice;
+}
+
+function playRound(playerMove, computerChoice){
+
+  let finalMessage = `Your Move: ${playerMove[0].toUpperCase() + playerMove.slice(1)}. Computer Move: ${computerChoice[0].toUpperCase() + computerChoice.slice(1)}. Result: `;
+  if (playerMove === computerChoice){
     finalMessage += 'Tie!';
   }
-  else if ((playerMove === 'rock' && computerMove === 'scissors') || (playerMove === 'scissors' && computerMove === 'paper') || (playerMove === 'paper' && computerMove === 'rock')){
+  else if ((playerMove === 'rock' && computerChoice === 'scissors') || (playerMove === 'scissors' && computerChoice === 'paper') || (playerMove === 'paper' && computerChoice === 'rock')){
     finalMessage += 'Win!';
+    humanScore += 1;
   }
   else{
     finalMessage += 'Lost!';
+    computerScore += 1;
   }
+
+  document.querySelector('.human-score').innerHTML = `Your Score: ${humanScore}`;
+  document.querySelector('.computer-score').innerHTML = `Computer Score: ${computerScore}`;
+
+  localStorage.setItem('humanScore', JSON.stringify(humanScore));
+  localStorage.setItem('computerScore', JSON.stringify(computerScore));
+
   console.log(finalMessage);
+  console.log(`Your Score: ${humanScore}`);
+  console.log(`Computer Score: ${computerScore}`);
   return;
 }
+
+playRound(getHumanChoice(), getComputerChoice());
