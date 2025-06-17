@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Function scope example</title>
+  </head>
+<body>
+
+  <script>
+    const x = 1;
+
+    // calling a() and b()
+    a();
+    b();
+
+    function a() {
+      const y = 2;
+
+      // allowing you to see inside function
+      output(y);
+    }
+
+    function b() {
+      const z = 3;
+
+      output(z);
+    }
+
+    // cnannot output variables y and z because they are inside the function, nnut then you can also put anther function that connects a and b to output (allowing you to see it's variable) 
+
+    // also, its obvious but variables locked (created) inside one function cannot be used in another function (unless that function is nested inside that function, or is passed by parameter)
+
+    function output(value) {
+      const para = document.createElement('p');
+      document.body.appendChild(para);
+      para.textContent = `Value: ${value}`;
+    }
+  </script>
+</body>
+</html>

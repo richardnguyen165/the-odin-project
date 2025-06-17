@@ -1,0 +1,92 @@
+Steps to problem solving.
+
+1. Understand the problem 
+If you don't understand the problem, you won't know when you have successfully solved it (if you ever), wasting your time
+
+
+2. Plan
+Plan out how you are solving it first. Ask questions such as:
+
+Does your program have a user interface? What will it look like? What functionality will the interface have? Sketch this out on paper.
+What inputs will your program have? Will the user enter data or will you get input from somewhere else?
+What’s the desired output?
+Given your inputs, what are the steps necessary to return the desired output?
+
+Then, you will need to write an algorithhm. You can do this by writing it in pseudocode.
+
+3. Write the algorithm in pseudocode
+
+Write out your logic in natural language instead of code
+
+When the user inputs a number
+Initialize a counter variable and set its value to zero
+While counter is smaller than user inputted number increment the counter by one
+Print the value of the counter variable
+
+
+4. Divide and conquer
+Solve each subproblem carefully (or in order, starting from the smallest subproblem) DO NOT TRY TO SOLVE THE BIG PROBLEM IN ONE GO. Divide it into smaller, easily manageable subproblems (decompsition is the main way to deal with complexity, making problems easier and more approachable to solve and understand)
+
+HAVE  A FRAMEWORK (AND ALWAYS LEARN HOW TO SOLVE PROBLEMS) (ANOTHER WAY)
+
+1. Understand
+2. Plan // write it out, use comments
+3. Divide
+4. Stuck?
+
+(Take a deep breath)
+(Debug: Go step by step through your solution trying to find where you went wrong -> Debugging)
+(Research (if you are allowed to))
+
+
+ALWAYS PRACTICE, PRACTICE, PRACTICE
+
+
+PSEUDOCODE STRUCTURE
+
+The Main Constructs of Pseudocode
+At its core, pseudocode is the ability to represent six programming constructs (always written in uppercase): SEQUENCE, CASE, WHILE, REPEAT-UNTIL, FOR, and IF-THEN-ELSE. These constructs — also called keywords — are used to describe the control flow of the algorithm.
+
+SEQUENCE represents linear tasks sequentially performed one after the other.
+ 
+WHILE is a loop with a condition at its beginning.
+ 
+REPEAT-UNTIL is a loop with a condition at the bottom.
+ 
+FOR is another way of looping.
+ 
+IF-THEN-ELSE is a conditional statement changing the flow of the algorithm.
+ 
+CASE is the generalization form of IF-THEN-ELSE. 
+
+EXAMPLE:
+IF employee gets eight or more questions correct 
+  Display message: “Congratulations on passing the quiz!” 
+  Transition to printable certificate of completion page   
+ELSE
+  Display message: “Let’s try again!” 
+  Transition back to first page of quiz   
+
+
+Andy Harris Video
+Coding is pretty much talking to the machine (not learning about languages)
+
+Write out concepts, then convert to code (paper or comments)
+
+Commments explain code to the computer
+
+The algorithm part is the hard part
+
+
+Write in the comments
+One line at a time, convert the comment to code
+
+Usually when we error, its an algorithm problem
+
+
+How to debug?
+
+The best way to debug is to not have bugs
+
+DON'T START WITH A SOLUTION
+START BY TRULY UNDERSTANDING THE SOLUTION
