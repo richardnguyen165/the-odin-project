@@ -60,4 +60,11 @@ function playRound(playerMove, computerChoice){
   return;
 }
 
-playRound(getHumanChoice(), getComputerChoice());
+
+function playGame(){
+  for (let i = 0; i < 5; i++){
+    playRound(getHumanChoice(), getComputerChoice());
+  }
+}
+
+playRound();
