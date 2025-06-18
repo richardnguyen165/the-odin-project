@@ -1,0 +1,31 @@
+- use camelCase in naming variable
+- name your variables and functions to be descriptive, clean and nice
+- use consistent vocabulary throughout your code (for example, functions in game have a thign related to "getting a thing")
+- variables should begin with a noun or adjective (noun phrase)
+- use searchable and understandable values (for example, no magic numbers)
+- stick to consistent indentation and line length (80 chracters long, 2 tabs)
+
+- comments cane be used to:
+(10 Principles for Keeping your Programming Code Clean)
+Authoring specifications (e.g. /* Coded by John, November 13th 2010 */).
+Detailed statements on the functionality of a method or procedure (e.g. /* This function validates the login form with the aid of the e-mail check function */).
+Quick notifications or labels that state where a recent change was made (e.g. /* Added e-mail validation procedure */).
+
+
+- avoid extremeley large functions
+- do noy mix languages in one file
+- treat changes with caution:
+Keeping the correct indentations (e.g. when inserting an IF clause, its contents’ indentations will be augmented).
+Commenting on the modification made or broadening the existing comments.
+Respecting standards in use.
+(Comments should tell us why it works)
+
+"If you write your code to be consumed by other programmers first, and by the compiler second, you may find the need for additional comments to be greatly reduced. Here’s an excellent example of using comments as a crutch:" (In other words, make your code human readable -> and then you can reduce the amount of comments) -> though comments can help some tricky parts (remember: code explains why the code works as it is)
+
+in comments do not:
+Writing explanatory notes to self (e.g. /* Will finish this later… */).
+Blaming stuff on other people (e.g. /* John coded this. Ask him. */).
+Writing vague statements (e.g. /* This is another math function. */).
+Erasing chunks of code. Sometimes people are not sure of erasing things and it’s not absolutely evil to comment that code instead.
+
+(comments should be narrative asides, not telling the story! the code does, like a story text!)
