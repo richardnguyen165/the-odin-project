@@ -1,25 +1,36 @@
-const add = function() {
-	
+const add = function(firstNumber, secondNumber) {
+  return firstNumber + secondNumber;
 };
 
-const subtract = function() {
-	
+const subtract = function(firstNumber, secondNumber) {
+	return firstNumber - secondNumber;
 };
 
-const sum = function() {
-	
+const sum = function(allNumbers) {
+  if (!(allNumbers)){
+    return 0;
+  }
+	const total = allNumbers.reduce((accumulator, next) => accumulator += next, 0);
+  return total;
 };
 
-const multiply = function() {
-
+const multiply = function(allNumbers) {
+  if (!(allNumbers)){
+    return 0;
+  }
+  const product = allNumbers.reduce((accumulator, next) => accumulator *= next, 1);
+  return product;
 };
 
-const power = function() {
-	
+const power = function(base, exponent) {
+  return base ** exponent;
 };
 
-const factorial = function() {
-	
+const factorial = function(number) {
+	if (number === 1 || number === 0){
+    return 1;
+  }
+  return number * factorial(number - 1);
 };
 
 // Do not edit below this line
