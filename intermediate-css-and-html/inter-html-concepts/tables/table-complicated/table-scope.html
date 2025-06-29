@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- SCOPE - helps screen readers determine if a table header is for a row or a column for example, and allows screen readers to read out entire rows or columns -->
+
+  <!-- indicates there headers are for columns (header at top of page) -->
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Purchase</th>
+        <th scope="col">Location</th>
+        <th scope="col">Date</th>
+        <th scope="col">Evaluation</th>
+        <th scope="col">Cost (€)</th>
+      </tr>
+    </thead>
+  </table>
+
+  <!-- will read out the entire row, as the header is connected to the scope -->
+  <table>
+    <tr>
+      <th scope="row">Haircut</th>
+      <td>Hairdresser</td>
+      <td>12/09</td>
+      <td>Great idea</td>
+      <td>30</td>
+    </tr>
+  </table>
+
+  <!-- use colgroup or rowgroup for elements that use rowspan or colspan -->
+
+  <!-- for an overlapping column, ontop of 3 column headers (Trousers, Skirts and Dresses)-->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="3" scope="colgroup">Clothes</th>
+      </tr>
+      <tr>
+        <th scope="col">Trousers</th>
+        <th scope="col">Skirts</th>
+        <th scope="col">Dresses</th>
+      </tr>
+    </thead>
+  </table>
+
+  <!-- for an overlapping row, with two cities beside it-->
+  <table>
+    <tr>
+      <th rowspan="2" scope="rowgroup">The Netherlands</th>
+      <th scope="row">Amsterdam</th>
+      <td>89</td>
+      <td>34</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <th scope="row">Utrecht</th>
+      <td>80</td>
+      <td>12</td>
+      <td>43</td>
+    </tr>
+  </table>
+
+</body>
+</html>

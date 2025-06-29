@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- CHEATSHEET: https://docs.emmet.io/cheat-sheet/-->
+   
+  <!-- Use ! to generate HTML boilerplate -->
+  <!-- autocomepletes tags -> you don't have to type out the closing tag-->
+  <button></button>
+
+  <!--we dont have to do much more -->
+
+
+  <!-- type span.purple and press enter on emmet abrev. -> creates span with .purple class -->
+  <span class="purple"></span>
+
+  <!-- type span#red and press enter on emmet abrev. -> creates span with id red-->
+  <span id="red"></span>
+
+  <!-- .lol -> creates a div with class lol (if no element is specified it defaults to a div)-->
+  <div class="lol"></div>
+
+  <!-- or div.lol -->
+  <div class="lol"></div>
+
+  <!-- div.class-1.class-2#hi -->
+  <div class="class-1 class-2" id="hi"></div>
+
+  <!-- button[type="button"] -> acts as CSS (dont add whitespaces when typing)-->
+  <button type="button"></button>
+
+  <!-- [data-selected].active -->
+  <div data-selected="" class="active"></div>
+
+  <!-- div.purple>span.cyan -> creates a child (span) with class cyan inside the div -->
+  <div class="purple"><span class="cyan"></span></div>
+
+  <!-- header>nav>ul -->
+  <header>
+    <nav>
+      <ul></ul>
+    </nav>
+  </header>
+
+  <!-- multiplication -->
+  <!-- header>nav>ul>li*3 -> 3 list elements inside the unnumbered lists -->
+  <header>
+    <nav>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- header>nav>ul>li*3{hi} -> 3 list elements inside the unnumbered lists  each with text 'hi' inside of it -->
+  <header>
+    <nav>
+      <ul>
+        <li>hi</li>
+        <li>hi</li>
+        <li>hi</li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- header>nav>ul>li*3{List Item $} -> 3 list elements inside the unnumbered lists  each with text List Item #1, List Item #2 etc. -->
+  <header>
+    <nav>
+      <li>List Item 1</li>
+      <li>List Item 2</li>
+      <li>List Item 3</li>
+    </nav>
+  </header>
+
+  <!-- header>nav>ul>li*3.class-${List Item $} -> 3 list elements inside the unnumbered lists  each with text List Item #1, List Item #2 etc. and class-1, class-2, etc. for each list item -->
+  <header>
+    <nav>
+      <ul>
+        <li class="class-1">List Item 1</li>
+        <li class="class-2">List Item 2</li>
+        <li class="class-3">List Item 3</li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- header>nav>ul>li*3.class-${List Item $$} -> pad with zero--> 
+  <nav>
+    <ul>
+      <li class="class-1">List Item 01</li>
+      <li class="class-2">List Item 02</li>
+      <li class="class-3">List Item 03</li>
+    </ul>
+  </nav>
+
+  <!-- SIBLINGS  (USE +) -->
+
+  <!-- header+main+footer -->
+  <header></header>
+  <main></main>
+  <footer></footer>
+
+  <!-- header>nav+main+footer (we want the header to have a nav child, but main and footer to be siblings) -> WRONG-->
+  <header>
+    <nav></nav>
+    <main></main>
+    <footer></footer>
+  </header>
+
+  <!-- Use the caret to climb out of the child level (^)-->
+  <!-- header>nav^+main+footer -> CORRECT (but hard to read and understand)-->
+  <header>
+    <nav></nav>
+  </header>
+  <main></main>
+  <footer></footer>
+
+  <!-- OR-->
+  <!-- Use grouping via brackets -->
+  <!-- (header>nav)+main+footer -> CORRECT (like math, using brackets to seperate calculations) -->
+  <header>
+    <nav></nav>
+  </header>
+  <main></main>
+  <footer></footer>
+
+  <!--(header>h2{Heading}+nav>ol>li*5>a{Link $})+main+footer -->
+  <header>
+    <h2>Heading</h2>
+    <nav>
+      <ol>
+        <li><a href="">Link 1</a></li>
+        <li><a href="">Link 2</a></li>
+        <li><a href="">Link 3</a></li>
+        <li><a href="">Link 4</a></li>
+        <li><a href="">Link 5</a></li>
+      </ol>
+    </nav>
+  </header>
+  <main></main>
+  <footer></footer>
+
+  <!-- p*3.dog -> 3 p elements with class dog -->
+  <p class="dog"></p>
+  <p class="dog"></p>
+  <p class="dog"></p>
+
+  <!-- p.text -->
+  <p class="text"></p>
+
+  <!-- div>p -->
+  <div>
+    <p></p>
+  </div>
+</body>
+</html>

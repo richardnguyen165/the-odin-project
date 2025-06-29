@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- SVGs, known as scalable vector graphics, are a type of image that is: 
+  - scalable, meaning they can scale to any size and retain image quality without increasing file size
+  - can change their properties through css and javascript -->
+
+  <!-- Raster graphics are defiinded by a grid of pxies, and detail
+  is limited to size of that grid. To incrase the size of the image, you increase the size of the grid as well as the filesize. You also dont get to choose what all those new pixels look like -->
+
+  <!-- SVG / vector graphics use formulas for different shapes and lines, and will scale to  any size you want while file size remains the same . They are are also defined with XML (Extensible Markup Language), making it human-readable and interoperable with HTML (works in an HTML file)-->
+
+  <!-- SVGS are best for simple pictures, as every single detail of the image is written out as XML, but for very complex, high detaail images alot has to be written down, making it hard to store high-complexity SVG images -->
+
+  <!-- SVGS are typically downloaded or copied from a website or from an image editor that can create them-->
+
+  <!-- ANATOMY 
+
+    - xmlns - "XML NameSpace", indicates what type of XML are you using
+    - viewBox - bounds of the SVG, such as the positions of different points of the elements in your SVG
+    - class, id - attributes like in NHML, use CSS or JavaScript to target them
+    - <circle>, <rect>, <path>, and <text>, building blocks of image
+   -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect x=0 y=0 width=100 height=100 fill="burlywood"/>
+    <path d="M 10 10 H 90 V 90 L 10 60" fill="transparent" stroke="black" stroke-width="3"/>
+  <circle cx=50 cy=50 r=20 class="svg-circle"/>
+    <g class="svg-text-group">
+      <text x="20" y="25" rotate="10" id="hello-text">Hello!</text>
+      <use href="#hello-text" x="-10" y="65" fill="white"/>
+    </g>
+  </svg>
+
+  <!-- Link SVGs as they are cleaner (inling may allow you to change it dynamically, but will slow load time)-->
+</body>
+</html>

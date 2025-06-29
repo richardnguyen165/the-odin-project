@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel = "stylesheet" href = "./minimal-table.css">
+</head>
+<body>
+  <!-- Create a table with <table> 
+    
+  When to not use tables:
+  - Tables reduce accessibility for visually impaired users, as the screen readers that interpret thaet tags in the  HTML cannot inerpretet the tables, and is more confusing than with CSS layout techniguqes it will be confusing to users
+  - tags prduce tag soup making the code hard to write, maintain and fix
+  - tables are not automatically reponsive and and are sized according to their content (rather than size of parent container)
+  -->
+
+  <table></table>
+
+  <!-- this <td> -> represents table data -> think of it as a cell in Excel -->
+  <table>
+    <td>Hi, I'm your first cell.</td>
+    <td>I'm your second cell.</td>
+    <td>I'm your third cell.</td>
+    <td>I'm your fourth cell.</td>
+  </table>
+
+  <!-- Use <tr> (table row) -> to seperate wors from one another, and to add a new row without each other affecting -->
+
+  <table>
+    <tr>
+      <td>Hi, I'm your first cell.</td>
+      <td>I'm your second cell.</td>
+      <td>I'm your third cell.</td>
+      <td>I'm your fourth cell.</td>
+    </tr>
+    <tr>
+      <td>Second row, first cell.</td>
+      <td>Cell 2.</td>
+      <td>Cell 3.</td>
+      <td>Cell 4.</td>
+    </tr>    
+  </table>
+
+</body>
+</html>
