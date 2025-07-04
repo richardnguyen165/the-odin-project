@@ -1,0 +1,138 @@
+/*
+font-family consists of multiple fonts referecned (Stacking fonts), as if one of those fonts have not been installed on the computer, it will keep falling back on the next font, until it finds an valid and installed font on the computer
+*/
+
+body {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/*
+For example, if system-ui fails, it will try "Segoe UI"
+
+If you want to use a font thay will not be available on the user's decvice, you can install the font over an open source
+
+Howeverm make sure your font has a backup font, as the online source could have its URL change or its external API breaks. Additionally, there is performance issues with imported fles (thus, you should mainly use a font stack)
+
+To import a font, if needed
+
+1. Link in the HTML file from an online website
+
+An exaMple of using the Roboto from Google Fonts
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+*/
+
+/*
+2. Use an import tag
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*
+An important consideration is that Google Fonts API violates the European GDPR, but you can follow the rules by just downloading the fonts yourself
+
+3. Download the font from the web, put in your project repositiory and link it in the css.
+(THIS IS JUST AN EXAMPLE, THERE IS NO FONT) -> more reliable than an API, but have a fallback
+*/
+
+@font-face {
+  font-family: my-cool-font;
+  src: url(../fonts/the-font-file.woff);
+}
+
+h1 {
+  font-family: my-cool-font, sans-serif;
+}
+
+/*
+Text Styles
+*/
+
+/*
+font-style
+
+Used to make a font-style italic -> you can use <em> but a good rule of thumb is to use a CSS rule if the entire text to be italic.
+
+If you want a specific word/blurb of text to be italicized, use <em> in this case (use if for emphasis)
+
+EXAMPLE:
+
+<p>I <em>never</em> said he stole your money</p>
+<p>I never said <em>he</em> stole your money</p>
+<p>I never said he stole <em>your</em> money</p>
+*/
+
+
+
+/*
+Letter spaces changes the space between letters in a word. Use sparingly as it can make words  hard to read.
+*/
+
+.wide {
+  font-size: 24px;
+  letter-spacing: 0.5em;
+}
+
+.narrow {
+  font-size: 48px;
+  letter-spacing: -0.15em;
+}
+
+/*
+Line height changes the height between lines in wrapped text, increasing readability. It must be at least 1.5
+*/
+
+p.line-height {
+  line-height: 1.5;
+}
+
+/*
+Text-shadow adds shadow around text and ellipsis allows for truncating of overflowing property with a ellipsis
+*/
+
+.overflowing {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/*font-face specifices what font to download from the web, and you can then use it inside your html*/
+@font-face {
+  font-family: "myFont";
+  src: url("myFont.woff2");
+}
+
+html {
+  font-family: "myFont", "Bitstream Vera Serif", serif;
+}
+
+
+/*
+COPY AND PASTED FROM MDN
+
+Here are some important things to bear in mind about web fonts:
+
+- Fonts generally aren't free to use without restrictions. You have to pay for them and/or follow other license conditions, such as crediting the font creator in your code (or on your site). You shouldn't steal fonts and use them without giving proper credit.
+
+- All major browsers support WOFF/WOFF2 (Web Open Font Format versions 1 and 2). Even older browsers such as IE9 (released in 2011) support the WOFF format.
+
+- WOFF2 supports the entirety of the TrueType and OpenType specifications, including variable fonts, chromatic fonts, and font collections.
+
+- The order in which you list font files is important. If you provide the browser with a list of multiple font files to download, the browser will choose the first font file it's able to use. That's why the format you list first should be the preferred format — that is, WOFF2 — with the older formats listed after that. Browsers that don't understand one format will then fall back to the next format in the list.
+
+- If you need to work with legacy browsers, you should provide EOT (Embedded Open Type), TTF (TrueType Font), and SVG web fonts for download. This article explains how to use the Fontsquirrel Webfont Generator to generate the required files.
+
+
+*/
+
+
+/*
+Three ways to get fonts
+
+- Free font distributor -> makes free fonts for download (you may have to credit authors if you use their fonts)
+- Paid font distributor -> pay for font
+- Online font service, which saves and stores fonts for you -> easiest way
+*/

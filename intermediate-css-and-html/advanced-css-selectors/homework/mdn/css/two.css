@@ -1,0 +1,21 @@
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+/* Add styles here */
+
+#special{
+  background-color: yellow;
+}
+
+.alert{
+  border: 2px solid grey;
+}
+
+/*if element has two classes */
+.alert.stop{
+  background-color: red;
+}
+
+.alert.go{
+  background-color: green;
+}

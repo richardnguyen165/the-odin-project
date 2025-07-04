@@ -1,0 +1,16 @@
+Descendant selector
+
+article h2 {}
+
+Will select h2 elements that are within an article (no matter how deeply nested an h2 element is)
+
+Direct child selector 
+article > h2 {}
+Will select h2 elements that are only a child of the article element (must be a child, cannot be grnadchild or any further)
+
+
+
+a[target] -> checks if target is present in css atributes'
+
+pseudo-classes -> used on user actions on html and  position in html (document structure)
+

@@ -1,0 +1,7 @@
+The em is a relative unit that refers to the font-size of the parent's element. So if a prent's font-size is 16px, 1em would be 16px and 2em would ebe 32px (the child will be double the size of the parent).
+
+A rem is always referring to an element's parent. If bot a parent and a child get 2 rem, the calculated value will be the same.
+
+These units are used to help accessibility (for example, changing the font would allow rem to be dunamically changed, px would just remain static). However, not every length should be encoded as a reltive unit, and px values do scale when zooming. 
+
+Thus, use rem only for font size and px for everthing else. Em is more confusing and can lead to bugs. You can use rem for margin and padding (optional).

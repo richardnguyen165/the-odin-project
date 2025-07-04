@@ -1,0 +1,106 @@
+/*
+FONT LOADING
+
+Font loading should be loaded as early as possible, especially when loading from third-party websites as 
+they require seperate connection setups
+
+@font-face declaration is an essential part of working with any web font, and declares the name that refers to the font
+as well as the loaction of the font file (web or in the directory)
+
+A font is only downloaded if its referenced by a style that is used on the apge (a font is not requestd when a declaration is encountered)
+*/
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2");
+}
+
+
+/* Only downloaded if h1 element in page */
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2");
+}
+
+h1 {
+  font-family: "Open Sans"
+}
+
+/* 
+<head>
+  <style>
+    @font-face {
+        font-family: "Open Sans";
+        src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2");
+    }
+
+    body {
+        font-family: "Open Sans";
+    }
+
+    ...etc.
+
+  </style>
+</head>
+
+Inline font decalrations are recommended to be done under <head> in <style>, as the broswer can discover the font delcarations sooner,
+as the browser does not need to to wait for the external stylesheet to download. However, not all sites can acheive this as it rewuires additional
+processes to ensure the CSS is inlined correctly, and that any other additional CSS is delivered in a non-render blocking fashion
+
+If connecting with a third party site
+use "preconnect" to establish early connections with the third-party origin, and to actually "preconnect" with that font file to download it.
+Preload however takes browser resources from the loading of other resources, and inlining may be more effective and ignores unicode-range (characters
+font applies to) and should be use d prudenly to load a single font format.
+
+<head>
+  <link rel="preconnect" href="https://fonts.com">
+  <link rel="preconnect" href="https://fonts.com" crossorigin>
+</head>
+*/
+
+
+/*
+If you downloaded fonts on your directory (self-hosted)
+
+- Use CDN or HTTP/HTTP2 so that it has better performance than third-part websites
+- Use WOFF2 and fontsubsetting, what hthird parties do
+- WOFF2 has the widest browser support and offers the best compression (Use only WOFF2 and forget everything else)
+- Subset fonts include number of glyphs for all the various fonts, but you can set a sepcific range for characters to be affected by a font (thus optimizing time)
+
+The unicode-range descriptor in the @font-face declaration informs the browser which characters a font can be used for.
+
+Example: 
+*/
+@font-face {
+    font-family: "Open Sans";
+    src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2");
+    unicode-range: U+0025-00FF;
+}
+
+/*
+A unicode range helps remove unused glyphs, which can significantly reduce the filesize of a font.
+*/
+
+/*
+Another way is to use web fonts, such as system-ui (font of the system you are using) (this is called a system font)
+
+font-family: system-ui
+
+
+Copy and pasted from MDN
+FONT DELAYS
+Block period: The block period begins when the browser requests a web font. During the block period, if the web font isn't available, the font is rendered in an invisible fallback font and thus the text is invisible to the user. If the font isn't available at the end of the block period, it's rendered in the fallback font.
+Swap period: The swap period comes after the block period. If the web font becomes available during the swap period, it's "swapped" in.
+font-display strategies reflect different viewpoints about the tradeoff between performance and aesthetics. As such, it's difficult to recommend an approach as it depends on individual preferences, how important the web font is to the page and brand, and how jarring a late-arriving font can be when swapped in.
+
+For most sites, these are the three most applicable strategies, based on your top priority:
+
+Performance: Use font-display: optional. This is the most "performant" approach: text render is delayed for no longer than 100ms and there's assurance that there isn't font-swap related layout shifts. The downside is that the web font won't be used if it arrives late.
+
+Quickly display text and still use a web-font: Use font-display: swap but make sure to deliver the font early enough that it does not cause a layout shift. The downside of this option is the jarring shift when the font arrives late.
+
+Text is displayed in a web font: Use font-display: block but make sure to deliver the font early enough that it minimizes the delay of the text. The initial text display is delayed. Despite this delay, it can still cause a layout shift as the text is actually drawn invisible, and the fallback font space is therefore used to reserve the space. Once the web font loads, this may require difference space, hence a shift. This may be a less jarring shift than font-display: swap, as the text itself won't be seen to shift.
+
+Note: font-display: auto, font-display: block, font-display: 
+*/
+

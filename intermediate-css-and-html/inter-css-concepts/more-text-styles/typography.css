@@ -1,0 +1,92 @@
+/*
+Use media queries to change font size depending on screen size
+
+min-width: applies to anything equal to above this width
+
+max-width: applies to anything below this width
+*/
+
+@media (min-width: 30em) {
+  html {
+    font-size: 125%;
+  }
+}
+
+@media (min-width: 40em) {
+  html {
+    font-size: 150%;
+  }
+}
+
+@media (min-width: 50em) {
+  html {
+    font-size: 175%;
+  }
+}
+
+@media (min-width: 60em) {
+  html {
+    font-size: 200%;
+  }
+}
+
+/*
+Scaling text
+
+Do not use vw or vh by itself; use the CSS function calc() to dynamically calculate the font-size 
+(let the browser do the math)
+
+DO NOT DO THIS:
+html {
+  font-size: 2.5vw;
+}
+
+DO THIS (MIX A RELATIVE UNIT LIKE EM, REM OR CH)
+*/
+
+html {
+  font-size: calc(0.75rem + 1.5vw);
+}
+
+
+/*
+Clamping text
+
+Prevents text from resizing to extremes by setting a minimum and maximum
+Syntax: clamp(min, calculation, max)
+*/
+
+html {
+  font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
+}
+
+/*
+Line length
+
+Use ch (ch-> characters) -> indicates max number of characters on a line, or use rem (use ch, as its easier to understand)
+
+Do not use px (absolute units)
+
+TIPS (copy and pasrted from web.dev "The Elements of Typographic Style, Robert Bringhurst")
+"Anything from 45 to 75 characters is widely regarded as a satisfactory line length for a single-column page set in a serifed text face in a text size. The 66-character line (counting both letters and spaces) is widely regarded as ideal. For multiple column work, a better average is 40 to 50 characters."
+*/
+
+/*maximum of 66 characters on a line*/
+article {
+  max-inline-size: 66ch;
+}
+
+/*
+Line height
+
+Speicifies line height of line (use <number> and not <measurement>) Use unitless numbers. Note
+that the larger the line height, the harder it will be to read large blocks of lines.
+
+Example:
+line-height: 1.5;
+*/
+
+
+
+
+

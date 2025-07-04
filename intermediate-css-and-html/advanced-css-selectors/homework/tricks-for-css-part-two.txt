@@ -1,0 +1,43 @@
+Nth Last Child Selector
+Select an element by its order in another element, counting from the back
+
+:nth-last-child(A)
+Selects the children from the bottom of the parent. This is like nth-child, but counting from the back!
+Examples
+:nth-last-child(2) selects all second-to-last child elements.
+
+:nth-last-child(1) selects all last elements belonging to some parent.
+bento:nth-last-chid(3) -> selects all bentos that are the 3rd last child inside any parent
+bento:nth-last-child(2n + 2) ->  starts at 2nd bento, and chooses every second plate afterwards (n=0 -> ) 
+
+
+First of Type Selector
+Select the first element of a specific type
+
+:first-of-type finds the first type of an element
+span:first-of-type selects the first span in any element.
+
+apple:first-of-type -> selects first apple
+
+Only of Type Selector
+Select elements that are the only ones of their type within of their parent element
+:only-of-type
+Selects the only element of its type within another element.
+Examples
+p span:only-of-type selects a span within any p if it is the only span in there.
+
+
+Empty Selector
+Select elements that don't have children
+:empty
+Selects elements that don't have any other elements inside of them.
+
+
+Negation Pseudo-class
+Select all elements that don't match the negation selector
+:not(X)
+You can use this to select all elements that do not match selector "X".
+Examples
+:not(#fancy) selects all elements that do not have id="fancy".
+div:not(:first-child) selects every div that is not a first child.
+:not(.big, .medium) selects all elements that do not have class="big" or class="medium".

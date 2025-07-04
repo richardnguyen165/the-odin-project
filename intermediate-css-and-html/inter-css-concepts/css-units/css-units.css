@@ -1,0 +1,21 @@
+/*
+Absolute units are those that remain the same in any contenxt. (Example: px)
+*/
+
+/*
+Relative units change based on their context
+
+em and rem are based on their font size
+
+1em is  font-size of an element (or the element's parent if you are using the element's parent to set the font size)
+
+(if an element's font size is 16px, then setting its width to 4em makes it width 64px (16 x 4 = 64)
+
+Its based of the font size
+
+rem is based on the root element, and is recommmended, as it allows to respect the user wishes of font readability
+*/
+
+/*vh and v stand for viewport height and viewport width respectively
+
+1vh = 1% of viewport height*/

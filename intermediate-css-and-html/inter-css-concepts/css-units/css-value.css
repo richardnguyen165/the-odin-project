@@ -1,0 +1,72 @@
+/*
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#numbers_lengths_and_percentages
+
+CSS values allow declarations to choose the right type of values to describe attributes
+*/
+
+/*
+Some CSS value are numeric, which are integers (non-floats), numbers (includes floats), 
+dimension (number + units), and percentage, lengths (most common, absolute and relative)
+
+Absolute length units do not change regardless of context (such as cm, inch, px etc.). With the exception of px, other units are used for printing text
+
+Relative length units DO change in context (such as em, rem, vh, and vw). It allows you to scale relative to other elements
+
+em is relative to the parent's font size. "To recap, the em unit means "my parent element's font-size" if used for font-size, and "my own font-size" If you are nesting ems inside each other -> size would get progressively larger
+
+rem is the root element's font-size, meaning that nesting rems wont change anuthing
+*/
+
+/*
+PERECENTAGES
+
+Percentages are always set realtive to some other value, specifically the parent container.
+
+For example, if the parent container has a width of 400px, and the child container has a width of 40%, it is 160px wide actually
+*/
+
+/*
+Some attributes dont need units, like opacity which ranges from 0-1
+
+Color can be based on hexadecimal, using functions such as rgb or using color keywords
+
+rgb(18 138 125 / .9) -> .9 represents opacity
+
+<hue> can help tell differences in colors (like a color wheel) -> hwb, hs
+*/
+
+/*Image connected via url*/
+.image {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
+}
+
+/*
+Position -> represents a set of 2D coordinates, and can be used to position an image. Use keywords suck as top, left, bottom, right and center as well as lengths to align an object.
+*/
+
+.box{
+   background-position: right 60px;
+}
+
+/*
+Strings and Identifier
+*/
+
+.box::after {
+  content: "This is a string. I know because it is quoted in the CSS.";
+}
+
+/*
+Functions -> rgb() and calc()
+*/
+
+.wrapper {
+  width: 400px;
+}
+.box {
+  padding: 1em;
+  border-radius: 0.5em;
+  border: 5px solid rebeccapurple;
+  background-color: lightblue;
+  width: calc(20% + 100px);
+}

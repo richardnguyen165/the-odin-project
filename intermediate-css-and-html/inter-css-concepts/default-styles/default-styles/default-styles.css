@@ -1,0 +1,81 @@
+/*
+Meyer's Reset
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/*
+This is the first CSS Reset. A reset pretty much removes the built in defaults, and zeroes them. (such as default margin, padding etc.). It removes all the useful browser defaults (which is a disadvantage)
+*/
+
+/*
+Normalize.css
+
+What a CSS Reset shold do:
+- Be compact of code
+- Did remove styling from an elements consistent across browsers
+- You can alter the reset
+
+*/
+
+/*
+Reset Questons to Ask:
+What elements does the reset touch?
+What properties are changed?
+Do you try to preserve the spirit of the user agent stylesheet?
+Is size a concern?
+*/
+
+/*
+Reboot
+Makes improvements to browser styles while preserving useful behaviour (not reseting or reverting to zero for example)
+*/
+
+/*
+Challeneges of default stylesheets
+1. Each browser may have different defaults
+2. Some browser sheets implement weird, undesirable behavior
+3. Sometimes not all defaults are desired
+
+To solve it, deves either normalize, reset, or combine the two using CSS
+
+Normalize is fixing the inconsistencies between browsers while still broaldy retaining theur default set of styles (normalize.css)
+
+Reset is a nuclear option (it removes marhins , paddings and rext styles) elements do not look the way are, but ir removes the "whack-a-mole" problem of CSS completely, as its now a blank canvas (meaning you can add and it appears exactly as you want)
+
+Hybird mixes the two above (modern-normalize)
+
+Link using
+
+<link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
+
+or 
+
+@import 'node_modules/modern-normalize/modern-normalize.css';
+
+mordern-normalize does the traditional job of a normalize stylesheet and some opionated defaults of its own
+*/
+
+
+/*Use all:revert to undo a reset*/
+.article :where(h1, h2, h3, h4, h5) {
+  all: revert;
+}

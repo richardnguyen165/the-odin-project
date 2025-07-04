@@ -1,0 +1,123 @@
+https://flukeout.github.io/ (note this website does not allow some valid solutions, but it explanations are good)
+
+Class Selector
+
+A.className, where A is a type and className is a class name
+
+ul.important selects all ul elements that have class="important"
+#big.wide selects all elements with id="big" that also have class="wide"
+
+
+bento > orange.small -> chooses all elements that have the parent of a bento container, is an orange element and contains the class "small"
+
+Comma Combinator
+
+plate, bento  -> using a comma which allows you to apply CSS to more than two selectors
+In this case, finding all elements that are of type plate or bento
+
+Examples
+p, .fun selects all p elements as well as all elements with class="fun"
+a, p, div selects all a, p and div elements
+
+
+Universal Selector 
+
+*
+Selects all elements in HTML
+
+
+Combine the Universal Selector
+A * -> selects all elements inside parent A
+p * selects every element inside all p elements.
+ul.fancy * selects every element inside all ul class="fancy" elements.
+(Add the space before adding the star)
+
+
+Adjacent Sibling Selector
+Selects an element that directly follows it 
+For example .group1 + div (selects the div that follows any elements that has class "group1")
+p + .intro selects every element with class="intro" that directly follows a p
+div + a selects every a element that directly follows a div
+plate + apple selects every apple that follows after a plate
+
+
+General Sibling Selector
+Selects ALL ELEMENTS THAT FOLLOW AFTER IT
+A ~ B selects all B that follow a A
+bento ~ pickle selects all "pickle" that follow after "bento" (if its in the first level, not considering nested pickles inside other parents)
+
+
+First Child Pseudo-selector
+Select a first child element inside of another element
+NOTE TO SELF: A child element is any element is any element directly nested inside another element.
+This means this pseudo-selector must be applied on the child (not the parent)
+
+plate orange:first-child -> finds first child orange inside all plate elements
+p:first-child selects all first child p elements.
+div p:first-child selects all first child p elements that are in a div
+
+
+Only Child Pseudo-selector
+Select an element that are the only element inside of another one.
+:only-child
+You can select any element that is the only element inside of another one.
+
+span:only-child selects the span elements that are the only child of some other element.
+ul li:only-child selects the only li element that are in a ul.
+plate apple:first-child, plate pickle:first-child -> selects apple elements that are inside a plate element and have no siblings, AND also selects pickle elements that are inside a plate element and have no siblings.
+
+
+Level 17 of 32 
+ 
+Last Child Pseudo-selector
+Select the last element inside of another element
+:last-child
+You can use this selector to select an element that is the last child element inside of another element.
+
+Pro Tip → In cases where there is only one element, that element counts as the first-child, only-child and last-child!
+Examples
+:last-child selects all last-child elements.
+span:last-child selects all last-child span elements.
+ul li:last-child selects the last li elements inside of any ul.
+
+pickle:last-child, plate apple:last-child -> chooses any pickle that is last child of parent AND chooses any APPLE that is the last child inside a plate element
+
+
+OK for pseudo selectors focusing on child-parent relationships such as only child, first child and lasy child as well as nth child, you are from the prespective of the child, not the parent -> they focus on element position within their siblings (not parent to child)
+
+.table:nth-child(3) -> means element with table class and the third child of some parent (this has a different meaning)
+.table :nth-child(3) -> means element inside the table class that is the third child (this works)
+.table plate:nth-child(3) -> means a plate element inside the table class that is the third child (this also works)
+plate:nth-child(3) 
+
+
+these 3 have the same result:
+
+example html:
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class = "table">
+      <div>Hi</div>
+      <div>Hello</div>
+      <div>Greetings</div>
+    </div>
+  </body>
+</html>
+
+.table div:nth-child(3){ // a third child div that is the child of parent containing the table class
+  background-color: red;
+}
+
+.div:nth-child(3){ // any div that is the third child of any parent
+  background-color: red;
+}
+
+:nth-child(3){ // any element that is the third child of any paren
+  background-color: red;
+}

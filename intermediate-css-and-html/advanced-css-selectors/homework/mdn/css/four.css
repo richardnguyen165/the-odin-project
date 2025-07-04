@@ -1,0 +1,17 @@
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+/* Add styles here */
+
+/*Gets all siblings that aredirectly next to an h2 element and is a para element*/
+h2 + p{
+  color: red;
+}
+
+/*Using direct child combinator, removes bullet points from list elements that are the direct child of an element that has a list class*/
+.list > li{
+  list-style-type: none;
+  border-bottom: 1px solid grey;
+}
+
+

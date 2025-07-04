@@ -1,0 +1,61 @@
+/*
+> - the child combinator
++ - the adjacent sibling combinator
+~ - the general sibling combinator
+
+These combinators help access child elements (elements inside containers) and sibling elements
+
+*/
+
+
+/*
+EXAMPLE HTML:
+
+
+<main class="parent">
+  <div class="child group1">
+    <div class="grand-child group1"></div>
+  </div>
+  <div class="child group2">
+    <div class="grand-child group2"></div>
+  </div>
+  <div class="child group3">
+    <div class="grand-child group3"></div>
+  </div>
+</main>
+*/
+
+/*Selects all divs inside the <main>, accessing all children of parent (main)*/
+main div {
+  /* Our cool CSS */
+}
+
+
+/*
+Selects the an adjacent sibling of group1 (ONLY group2) 
+Only the div with the classes "child group2" will get selected by this
+*/
+.group1 + div{
+  /* Our Cool CSS */
+}
+
+/*
+Selects group1 sibling 2 away/down (ONLY group3) 
+Only the div with the classes "child group3" will get selected by this
+*/
+.group1 + div + div{
+  /* Our Cool CSS */
+}
+
+/*
+Selects all siblings of group1 (except itself)
+All of .group1's div siblings - in this case the 2nd and 3rd .child divs, will get selected by this
+*/
+.group1 ~ div{
+  /* Our Cool CSS */
+}
+
+
+/*
+Note that .group1 means that it will choose any class that has "group1" class in it, and then follow the rules after it (to find that element if it follows the rule specified in the selector)
+*/

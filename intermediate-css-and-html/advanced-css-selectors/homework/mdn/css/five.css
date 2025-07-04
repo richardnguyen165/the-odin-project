@@ -1,0 +1,17 @@
+a {
+  list-style-type: none;
+  border: 5px solid grey;
+}
+/* Add styles here */
+
+a[title]{
+  border-color: pink;
+}
+
+a[href*="contact"]{
+  border-color: orange;
+}
+
+a[href^="https"]{
+  border-color: green;
+}

@@ -1,0 +1,275 @@
+/*
+background
+
+brackgroud property is actually a shorthand
+for 8 diff. background-related properties
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/background#formal_syntax
+
+
+This property is a shorthand for the following CSS properties:
+
+background-attachment
+background-clip
+background-color
+background-image
+background-origin
+background-position
+background-repeat
+background-size
+
+
+SYNTAX: 
+
+Using a <background-color>
+background: green;
+
+Using a <bg-image> and <repeat-style>
+background: url("test.jpg") repeat-y;
+
+Using a <visual-box> and <'background-color'>
+background: border-box red;
+
+A single image, centered and scaled
+background: no-repeat center/80% url("../img/image.png");
+
+Global values
+background: inherit;
+background: initial;
+background: revert;
+background: revert-layer;
+background: unset;
+
+
+(copy and pasted)
+Each layer may include zero or one occurrences of any of the following values:
+
+<attachment>
+<bg-image>
+<bg-position>
+<bg-size>
+<repeat-style>
+The <bg-size> value may only be included immediately after <bg-position>, separated with the '/' character, like this: center/80%.
+
+The <visual-box> value may be included zero, one, or two times. If included once, it sets both background-origin and background-clip. If it is included twice, the first occurrence sets background-origin, and the second sets background-clip.
+
+The <'background-color'> value may only be included in the last layer specified.
+
+
+Values
+<attachment>
+See background-attachment. Default: scroll.
+
+<visual-box>
+See background-clip and background-origin. Default: border-box and padding-box respectively.
+
+<'background-color'>
+See background-color. Default: transparent.
+
+<bg-image>
+See background-image. Default: none.
+
+<bg-position>
+See background-position. Default: 0% 0%.
+
+<repeat-style>
+See background-repeat. Default: repeat.
+
+<bg-size>
+See background-size. Default: auto.
+
+The following three lines of CSS are equivalent:
+
+
+(you can set these properties individually, if its easier) -> more clear
+
+*/
+
+/*
+BORDER
+
+border can be specified using 1, 2, 3 values
+
+3 values:
+border: <border-width> <border-style> <border-color>
+
+EXAMPLE
+
+style
+border: solid;
+
+width | style
+border: 2px dotted;
+
+style | color
+border: outset #f33;
+
+width | style | color
+border: medium dashed green;
+
+Global values
+border: inherit;
+border: initial;
+border: revert;
+border: revert-layer;
+border: unset;
+
+
+<border-width>
+Sets the thickness of the border. Defaults to medium if absent. See border-width.
+
+<border-style>
+Sets the style of the border. Defaults to none if absent. See border-style.
+
+<color>
+Sets the color of the border. Defaults to currentcolor if absent. See border-color.
+
+
+Outlones vs border
+
+Borders and outlines are very similar. However, outlines differ from borders in the following ways:
+
+Outlines never take up space, as they are drawn outside of an element's content.
+According to the spec, outlines don't have to be rectangular, although they usually are.
+Outline follows the same syntax as border
+*/
+
+
+/*
+border-radius
+
+helps makes corner round
+
+Usually consists of 1-4 values:
+
+border: <border-top-left-radius> <border-top-right-radius> <border-bottom-right-radius> <border-bottom-left-radius>
+
+
+The border-radius property is specified as:
+
+- one, two, three, or four <length> or <percentage> values. This is used to set a single radius for the corners.
+- followed optionally by "/" and one, two, three, or four <length> or <percentage> values. This is used to set an additional radius, so you can have elliptical corners.
+
+
+Example of syntax: 
+
+The syntax of the first radius allows one to four values
+
+Radius is set for all 4 sides
+border-radius: 10px;
+
+top-left-and-bottom-right | top-right-and-bottom-left
+border-radius: 10px 5%;
+
+top-left | top-right-and-bottom-left | bottom-right
+border-radius: 2px 4px 2px;
+
+top-left | top-right | bottom-right | bottom-left
+border-radius: 1px 0 3px 4px;
+
+The syntax of the second radius allows one to four values
+(first radius values) / radius
+border-radius: 10px / 20px;
+
+(first radius values) / top-left-and-bottom-right | top-right-and-bottom-left
+border-radius: 10px 5% / 20px 30px;
+
+(first radius values) / top-left | top-right-and-bottom-left | bottom-right
+border-radius: 10px 5px 2em / 20px 25px 30%;
+
+(first radius values) / top-left | top-right | bottom-right | bottom-left
+border-radius: 10px 5% / 20px 25em 30px 35em;
+
+Global values
+border-radius: inherit;
+border-radius: initial;
+border-radius: revert;
+border-radius: revert-layer;
+border-radius: unset;
+
+
+A slash is used to seperate the horizontal radii and the vertical radii
+
+border-radius: horizontal-radius / vertical-radius;
+
+border-radius: 50px; -> border-radius: 50px 50px 50px 50px / 50px 50px 50px 50px
+
+Each slash acts as its own border-radius -> refer to border-radious: horizontal-radius/vertical-radius and "Example of syntax"
+
+border-radius: 4px 3px 6px / 2px 4px;
+
+means
+
+border-top-left-radius: 4px 2px;
+border-top-right-radius: 3px 4px;
+border-bottom-right-radius: 6px 2px;
+border-bottom-left-radius: 4px 4px;
+
+*/
+
+/*
+box-shadow adds a shadow around a box
+
+
+SYNTAX: 
+
+Two, three, or four <length> values.
+
+If only two values are given, they are interpreted as <offset-x> and <offset-y> values.
+If a third value is given, it is interpreted as a <blur-radius>.
+If a fourth value is given, it is interpreted as a <spread-radius>.
+Optionally, the inset keyword.
+Optionally, a <color> value.
+
+
+Keyword values
+box-shadow: none;
+
+A color and two length values
+<color> | <length> | <length>
+box-shadow: red 60px -16px;
+
+Three length values and a color
+<length> | <length> | <length> | <color>
+box-shadow: 10px 5px 5px black;
+
+Four length values and a color
+<length> | <length> | <length> | <length> | <color>
+box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+
+inset, length values, and a color
+<inset> | <length> | <length> | <color>
+box-shadow: inset 5em 1em gold;
+
+Any number of shadows, separated by commas
+box-shadow:
+  3px 3px red inset,
+  -1em 0 0.4em olive;
+
+Global values
+box-shadow: inherit;
+box-shadow: initial;
+box-shadow: revert;
+box-shadow: revert-layer;
+box-shadow: unset;
+*/
+
+/*
+Overflow - helps when content overflows the padding box
+
+Keyword values
+overflow: visible; -> you can see content surge past the border
+overflow: hidden; -> you cannot see the conent that is overflowing
+overflow: clip; -> clips at border (like hidden)
+overflow: scroll; -> adds a scroll bar (even if it overflows)
+overflow: auto; -> adds a scrollbar only if it overflows
+overflow: hidden visible;
+
+Global values
+overflow: inherit;
+overflow: initial;
+overflow: revert;
+overflow: revert-layer;
+overflow: unset;
+*/
+

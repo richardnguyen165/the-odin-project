@@ -1,0 +1,150 @@
+/*
+A pseudo-class is a selctor that selects element in a specific state 
+(or action done on them, like hovering on them)
+acting as if you applied a class on them, giving you more maintainble code
+(no need to add extra classes). They are based on the structure or position in
+the HTML document, the state of a particular element, or how the user is currently interacting with it.
+
+A pseudo-class can be started by a single colon (:hover)
+
+Example:
+<article>
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+</article>
+
+*/
+
+/*
+Copy and Pasted from TOP: 
+
+Dynamic and user action pseudo-classes -> changes based on user action
+These types of useful pseudo-classes can make your page feel much more dynamic and interactive.
+
+:focus applies to an element that is currently selected by the user either through selecting it with their cursor or using their keyboard. (clicking on it with cursor / selecting with keyboard)
+
+:hover will affect anything under the user’s mouse pointer. It can be used to give extra oomph to buttons and links to highlight that they’re interactable, or to trigger a drop-down menu. (when your cursor is over something, but not clicking it)
+
+:active applies to elements that are currently being clicked, and is especially useful for giving your user feedback that their action had an effect. This is a great one to give your buttons and other interactive elements more ‘tactile’ feedback.
+*/
+
+/*
+structural pseudo-classes
+
+select them based on their position within the DOM
+
+:root -> represents the very top level of our document -> the one element that has no parebts, and 
+where you place your global 'CSS' rules you want everywhere (reboot, reset for example), (box-sizing: border-box) for instance
+:first-child -> matches first sibling
+:last-child -> matches last sibling
+:empty -> finds elements with no children
+:only-child -> finds element that has no siblings
+:nth-child -> see below
+
+.myList:nth-child(5) {Selects the 5th element with class myList}
+
+.myList:nth-child(3n) {Selects every 3rd element with class myList}
+
+.myList:nth-child(3n + 3) { Selects every 3rd element with class myList, beginning with the 3rd}
+
+.myList:nth-child(even) {Selects every even element with class myList}
+
+(use n to find every nth child, like a mathematical function)
+*/
+
+/*
+EXAMPLE: the first child that is a pragraph element inside article is going to be applied 
+This is helpful when adding multiple paragraphs
+*/
+article p:first-child {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+
+/*
+<p><a href="">Hover over me</a></p>
+*/
+a:link,
+a:visited {
+  color: rebeccapurple;
+  font-weight: bold;
+}
+
+a:hover {
+  color: hotpink;
+}
+
+/*
+Pseudo elements behave like pseudo classes except they act as if you had a whole new HTML
+element into the markup, rather than applying a class to existing elements. They start with 2 colons
+instead of 1. They pretty much affect parts of our HTML that are not elements.
+
+Example:
+<article>
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+</article>
+*/
+
+/*
+Examples:
+
+::marker -> changes the bullet points of a list element (<li>)
+::first-letter -> gives special styling to first letter of a text (use on <p> for example)
+::first-line -> gives special styling to first line of a text
+::selection -> changes highlighting when user selects text on a page (like double-clicking)
+::before -> adds HTML elements before element
+::after -> adds HTML elements after element
+*/
+
+/*adjusts first line of each paragraph element*/
+article p::first-line {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+
+/*
+You can also chain them together
+The first child of the article will always have its first line applied
+(The first child = the first paragraph)
+*/
+
+article p:first-child::first-line {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+
+/*
+You can generate content with ::before and ::after 
+<p class="box">Content in the box in my HTML page.</p>
+*/
+
+/*adds text before box class/element*/
+.box::before {
+  content: "This should show before the other content. ";
+  background-color: yellow;
+}
+
+/*adds after the element*/
+.box::after{
+  content: 'Im After';
+}
